@@ -1,33 +1,25 @@
-class Box<T> {
-    private T content;
+import java.util.ArrayList;
+import java.util.List;
 
-    public Box(T content) {
-        this.content = content;
-    }
-
-    public T getContent() {
-        return content;
-    }
-
-    public void setContent(T content) {
-        this.content = content;
-    }
-
-    public <E> void printContent(E extraInfo) {
-        System.out.println("Content: " + content + ", Extra: " + extraInfo);
+class Box {
+    public static <T> void displayArray(List<T> array) {
+        for(T element: array) {
+            System.out.println(element);
+        }
     }
 }
 
 public class Main {
     public static void main(String[] args) {
-        Box<String> stringBox = new Box<>("나는 커서 훌륭한 박스가 될거야!");
+        List<Integer> numbers = new ArrayList<>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
+//        String[] words = {"apple", "banana", "cherry"};
 
-        System.out.println(stringBox.getContent());
-
-        stringBox.setContent("실패!");
-
-        System.out.println(stringBox.getContent());
-
-        stringBox.printContent(123);
+        Box.displayArray(numbers);
+//        Box.displayArray();
     }
 }
