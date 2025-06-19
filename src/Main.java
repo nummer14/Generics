@@ -17,9 +17,13 @@ public class Main {
         numbers.add(3);
         numbers.add(4);
         numbers.add(5);
-//        String[] words = {"apple", "banana", "cherry"};
+
+        List<String> words = new ArrayList<>();
+        words.add("apple");
+        words.add("banana");
+        words.add("cherry");
 
         Box.displayArray(numbers);
-//        Box.displayArray();
+        Box.displayArray(words);
     }
 }
